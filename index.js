@@ -23,7 +23,8 @@ app.post("/webhook", (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+
+// 🚨 IMPORTANT FIX HERE
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Webhook running on port ${PORT}`);
 });
-
